@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_58872_needit.VendorByCountry</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>VendorByCountry</name>
+        <script><![CDATA[var VendorByCountry = Class.create();
+VendorByCountry.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    getVendor: function() {
+	
+	var country = this.getParameter('sysparm_country');
+	var vendor= new GlideRecord('x_58872_needit_vendor');
+
+        vendor.addQuery('country',country);
+        vendor.query();
+        gs.info("q country is " + country);
+        while(vendor.next()) {
+          gs.info("n vendor is " + vendor.name);
+          return vendor.name;
+        }
+
+    },
+    type: 'VendorByCountry'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-12 03:11:35</sys_created_on>
+        <sys_id>1c80bd8e0726d410b02bf61d7c1ed069</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>VendorByCountry</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_include_1c80bd8e0726d410b02bf61d7c1ed069</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-12 11:09:06</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Plan" max_length="40" name="x_58872_needit_plan" sizeclass="3" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Country" max_length="32" name="country" reference="core_country" type="reference"/>
+        <element label="Initial price" max_length="20" name="initial_price" type="price"/>
+        <element label="Location" max_length="32" name="location" reference="imp_location" type="reference"/>
+        <element label="Monthly price" max_length="20" name="monthly_price" type="price"/>
+        <element display="true" label="name" max_length="100" name="name" type="string"/>
+        <element label="Plan features" max_length="500" name="plan_features" type="string"/>
+        <element label="Vendor" max_length="32" name="vendor" reference="x_58872_needit_vendor" type="reference"/>
+        <index name="index">
+            <element name="country"/>
+        </index>
+        <index name="index2">
+            <element name="vendor"/>
+        </index>
+        <index name="index3">
+            <element name="location"/>
+        </index>
+    </element>
+</database>

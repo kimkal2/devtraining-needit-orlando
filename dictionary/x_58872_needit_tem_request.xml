@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="Tem_Request" max_length="40" name="x_58872_needit_tem_request" sizeclass="4" type="collection">
+        <element label="Business user" max_length="40" name="business_user" type="string"/>
+        <element label="Plan" max_length="32" name="plan" reference="x_58872_needit_plan" type="reference"/>
+        <element label="Plan addons" max_length="32" name="plan_addons" reference="x_58872_needit_plan_add_ons" type="reference"/>
+        <element label="Requested by" max_length="32" name="requested_by" reference="sc_request" type="reference"/>
+        <element label="Request item" max_length="32" name="request_item" reference="sc_req_item" type="reference"/>
+        <element choice="1" label="Request type" max_length="40" name="request_type" type="choice">
+            <choice/>
+        </element>
+        <element label="Subscription country" max_length="32" name="subscription_country" reference="core_country" type="reference"/>
+        <element label="Vendor" max_length="32" name="vendor" reference="x_58872_needit_vendor" type="reference"/>
+    </element>
+</database>
