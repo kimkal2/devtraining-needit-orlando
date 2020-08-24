@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>active</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>UpdatePlanComponentPrice</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading) {
+		return;
+	}
+
+	if (newValue === '') {
+		g_form.clearValue('price');
+		g_form.clearValue('recurring_price');
+
+	}
+	var addons_arr = g_form.getValue('mandatory_addons').split(',');
+   
+	var total_price = 0;
+	var total_recurring = 0;
+	addons_arr.forEach(function (addon, index) {
+		var getComponentPrice = new GlideAjax('GetPlanComponentPrice');
+		getComponentPrice.addParam('sysparm_name','mandatoryPlanComponentPrice');
+		getComponentPrice.addParam('sysparm_addons_sys_id', addon);
+
+		// Send the request to the server
+		getComponentPrice.getXML(populatePriceField);
+	});		
+
+	// When the response is back from the server
+	function populatePriceField(response){
+		// Extract the price value from the response, clear any value from the email field, 
+		// set new value in the email field
+		var priceFromScriptInclude = response.responseXML.documentElement.getAttribute("answer");
+		alert('priceFromScriptInclude ' +priceFromScriptInclude);
+		var price_arr = priceFromScriptInclude.split(';');		 
+		total_price += parseFloat(price_arr[0]);	
+		total_recurring += parseFloat(price_arr[1]);
+		g_form.clearValue('price');
+		g_form.setValue('price',total_price);
+		g_form.clearValue('recurring_price');
+		g_form.setValue('recurring_price',total_recurring);
+		
+	}
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 03:46:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c649111107be5410b02bf61d7c1ed0a8</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>UpdatePlanComponentPrice</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_client_c649111107be5410b02bf61d7c1ed0a8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 09:12:05</sys_updated_on>
+        <table>x_58872_needit_plan</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

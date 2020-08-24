@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="DELETE">
+        <misc>40</misc>
+        <order>100</order>
+        <question display_value="Choose one or more add on features">a5fa3ff50722d410b02bf61d7c1ed0fb</question>
+        <rec_misc>0</rec_misc>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-11 18:54:15</sys_created_on>
+        <sys_id>d9ff7bf90722d410b02bf61d7c1ed0f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>international voice-unlimited data-5GB-T-Mobile</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>question_choice_d9ff7bf90722d410b02bf61d7c1ed0f8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-11 18:54:15</sys_updated_on>
+        <text>international voice-unlimited data-5GB-T-Mobile</text>
+        <value>10</value>
+    </question_choice>
+    <fx_price action="DELETE" query="id=d9ff7bf90722d410b02bf61d7c1ed0f8"/>
+    <fx_price action="DELETE">
+        <amount>40</amount>
+        <currency display_value="USD">USD</currency>
+        <field>misc</field>
+        <id>d9ff7bf90722d410b02bf61d7c1ed0f8</id>
+        <parent/>
+        <reference_amount>40</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-11 18:54:15</sys_created_on>
+        <sys_id>5dff7bf90722d410b02bf61d7c1ed0f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-11 18:54:15</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_misc</field>
+        <id>d9ff7bf90722d410b02bf61d7c1ed0f8</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-11 18:54:15</sys_created_on>
+        <sys_id>15ff7bf90722d410b02bf61d7c1ed0f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-11 18:54:15</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>d90c9209db2f5708536ad5b0cf9619db</instance_id>
+        <instance_name>dev67081</instance_name>
+        <name>question_choice_d9ff7bf90722d410b02bf61d7c1ed0f8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice"><question_choice action="INSERT_OR_UPDATE"><misc>40</misc><order>100</order><question display_value="Choose one or more add on features">a5fa3ff50722d410b02bf61d7c1ed0fb</question><rec_misc>0</rec_misc><sys_class_name>question_choice</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-08-11 18:54:15</sys_created_on><sys_id>d9ff7bf90722d410b02bf61d7c1ed0f8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>international voice-unlimited data-5GB-T-Mobile</sys_name><sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package><sys_policy/><sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope><sys_update_name>question_choice_d9ff7bf90722d410b02bf61d7c1ed0f8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-08-11 18:54:15</sys_updated_on><text>international voice-unlimited data-5GB-T-Mobile</text><value>10</value></question_choice><fx_price action="delete_multiple" query="id=d9ff7bf90722d410b02bf61d7c1ed0f8"/><fx_price action="INSERT_OR_UPDATE"><amount>40</amount><currency display_value="USD">USD</currency><field>misc</field><id>d9ff7bf90722d410b02bf61d7c1ed0f8</id><parent/><reference_amount>40</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>admin</sys_created_by><sys_created_on>2020-08-11 18:54:15</sys_created_on><sys_id>5dff7bf90722d410b02bf61d7c1ed0f9</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-08-11 18:54:15</sys_updated_on><table>question_choice</table><type>calculated</type></fx_price><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="USD">USD</currency><field>rec_misc</field><id>d9ff7bf90722d410b02bf61d7c1ed0f8</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>admin</sys_created_by><sys_created_on>2020-08-11 18:54:15</sys_created_on><sys_id>15ff7bf90722d410b02bf61d7c1ed0f9</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-08-11 18:54:15</sys_updated_on><table>question_choice</table><type>calculated</type></fx_price></record_update>]]></payload>
+        <payload_hash>299971673</payload_hash>
+        <record_name>international voice-unlimited data-5GB-T-Mobile</record_name>
+        <reverted_from/>
+        <source>f424d33d07ae9410b02bf61d7c1ed0cf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-11 18:54:15</sys_created_on>
+        <sys_id>51ff7bf90722d410b02bf61d7c1ed0fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>173dedf7e120000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-11 18:54:15</sys_updated_on>
+        <type>Question Choice</type>
+        <update_guid>99ff7bf97822d410658c03ac617a99fc</update_guid>
+        <update_guid_history>99ff7bf97822d410658c03ac617a99fc:299971673</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="international voice-unlimited data-5GB-T-Mobile">f3986a4b07221010b02bf61d7c1ed09b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-15 09:45:04</sys_created_on>
+        <sys_db_object display_value="" name="question_choice">question_choice</sys_db_object>
+        <sys_id>1043eb3237aa4567af065b8e7106b959</sys_id>
+        <sys_metadata>d9ff7bf90722d410b02bf61d7c1ed0f8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>international voice-unlimited data-5GB-T-Mobile</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>question_choice_d9ff7bf90722d410b02bf61d7c1ed0f8</sys_update_name>
+        <sys_update_version display_value="question_choice_d9ff7bf90722d410b02bf61d7c1ed0f8">51ff7bf90722d410b02bf61d7c1ed0fd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-15 09:45:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

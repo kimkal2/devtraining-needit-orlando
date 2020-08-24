@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
+    <item_option_new action="DELETE">
+        <active>true</active>
+        <attributes/>
+        <cat_item display_value="TEM -New Mobile Subscription">4f42ef7507ee9410b02bf61d7c1ed034</cat_item>
+        <category/>
+        <choice_direction>down</choice_direction>
+        <choice_field/>
+        <choice_table/>
+        <create_roles/>
+        <default_html_value/>
+        <default_value/>
+        <delete_roles/>
+        <delivery_plan/>
+        <description/>
+        <display_title>false</display_title>
+        <do_not_select_first>false</do_not_select_first>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <example_text/>
+        <field/>
+        <global>false</global>
+        <help_tag>More information</help_tag>
+        <help_text/>
+        <include_none>false</include_none>
+        <instructions/>
+        <layout>normal</layout>
+        <list_table>x_58872_needit_plan_add_ons</list_table>
+        <lookup_label/>
+        <lookup_price/>
+        <lookup_table/>
+        <lookup_unique>false</lookup_unique>
+        <lookup_value/>
+        <macro/>
+        <mandatory>true</mandatory>
+        <map_to_field>false</map_to_field>
+        <mask_use_confirmation>false</mask_use_confirmation>
+        <mask_use_encryption>false</mask_use_encryption>
+        <name>select_add_on</name>
+        <order>600</order>
+        <price_if_checked>0</price_if_checked>
+        <pricing_implications>true</pricing_implications>
+        <question_text>Select add on features</question_text>
+        <read_roles/>
+        <rec_lookup_price/>
+        <rec_price_if_checked>0</rec_price_if_checked>
+        <record/>
+        <record_producer_table/>
+        <reference>x_58872_needit_plan_add_ons</reference>
+        <reference_qual>javascript:"planLIKE" + current.variables.select_plan  + "^active=true"</reference_qual>
+        <reference_qual_condition/>
+        <scale_max>5</scale_max>
+        <scale_min>0</scale_min>
+        <show_help>false</show_help>
+        <show_help_on_load>false</show_help_on_load>
+        <sp_widget/>
+        <summary_macro/>
+        <sys_class_name>item_option_new</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-15 09:46:43</sys_created_on>
+        <sys_id>6ea8624b07221010b02bf61d7c1ed022</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Select add on features</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>item_option_new_6ea8624b07221010b02bf61d7c1ed022</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-17 23:41:55</sys_updated_on>
+        <table/>
+        <tooltip/>
+        <type>21</type>
+        <ui_page/>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
+        <validate_regex/>
+        <variable_name/>
+        <variable_set/>
+        <variable_width/>
+        <visibility>1</visibility>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <visible_summary>true</visible_summary>
+        <write_roles/>
+    </item_option_new>
+    <sys_translated_text action="DELETE" query="documentkey=6ea8624b07221010b02bf61d7c1ed022"/>
+    <fx_price action="DELETE" query="id=6ea8624b07221010b02bf61d7c1ed022"/>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price_if_checked</field>
+        <id>6ea8624b07221010b02bf61d7c1ed022</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-15 09:46:43</sys_created_on>
+        <sys_id>7ff8aa4b07221010b02bf61d7c1ed019</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-15 09:46:43</sys_updated_on>
+        <table>item_option_new</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_price_if_checked</field>
+        <id>6ea8624b07221010b02bf61d7c1ed022</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-15 09:46:43</sys_created_on>
+        <sys_id>3ff8aa4b07221010b02bf61d7c1ed018</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-15 09:46:43</sys_updated_on>
+        <table>item_option_new</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>d90c9209db2f5708536ad5b0cf9619db</instance_id>
+        <instance_name>dev67081</instance_name>
+        <name>item_option_new_6ea8624b07221010b02bf61d7c1ed022</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new"><item_option_new action="INSERT_OR_UPDATE"><active>true</active><attributes/><cat_item display_value="TEM -New Mobile Subscription">4f42ef7507ee9410b02bf61d7c1ed034</cat_item><category/><choice_direction>down</choice_direction><choice_field/><choice_table/><create_roles/><default_html_value/><default_value/><delete_roles/><delivery_plan/><description/><display_title>false</display_title><do_not_select_first>false</do_not_select_first><dynamic_default_value/><dynamic_ref_qual/><example_text/><field/><global>false</global><help_tag>More information</help_tag><help_text/><include_none>false</include_none><instructions/><layout>normal</layout><list_table>x_58872_needit_plan_add_ons</list_table><lookup_label/><lookup_price/><lookup_table/><lookup_unique>false</lookup_unique><lookup_value/><macro/><mandatory>true</mandatory><map_to_field>false</map_to_field><mask_use_confirmation>false</mask_use_confirmation><mask_use_encryption>false</mask_use_encryption><name>select_add_on</name><order>600</order><price_if_checked>0</price_if_checked><pricing_implications>true</pricing_implications><question_text>Select add on features</question_text><read_roles/><rec_lookup_price/><rec_price_if_checked>0</rec_price_if_checked><record/><record_producer_table/><reference>x_58872_needit_plan_add_ons</reference><reference_qual>javascript:"planLIKE" + current.variables.select_plan  + "^active=true"</reference_qual><reference_qual_condition/><scale_max>5</scale_max><scale_min>0</scale_min><show_help>false</show_help><show_help_on_load>false</show_help_on_load><sp_widget/><summary_macro/><sys_class_name>item_option_new</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-08-15 09:46:43</sys_created_on><sys_id>6ea8624b07221010b02bf61d7c1ed022</sys_id><sys_mod_count>15</sys_mod_count><sys_name>Select add on features</sys_name><sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package><sys_policy/><sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope><sys_update_name>item_option_new_6ea8624b07221010b02bf61d7c1ed022</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-08-17 23:41:55</sys_updated_on><table/><tooltip/><type>21</type><ui_page/><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>advanced</use_reference_qualifier><validate_regex/><variable_name/><variable_set/><variable_width/><visibility>1</visibility><visible_bundle>true</visible_bundle><visible_guide>true</visible_guide><visible_standalone>true</visible_standalone><visible_summary>true</visible_summary><write_roles/></item_option_new><sys_translated_text action="delete_multiple" query="documentkey=6ea8624b07221010b02bf61d7c1ed022"/><fx_price action="delete_multiple" query="id=6ea8624b07221010b02bf61d7c1ed022"/><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="USD">USD</currency><field>price_if_checked</field><id>6ea8624b07221010b02bf61d7c1ed022</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>admin</sys_created_by><sys_created_on>2020-08-15 09:46:43</sys_created_on><sys_id>7ff8aa4b07221010b02bf61d7c1ed019</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-08-15 09:46:43</sys_updated_on><table>item_option_new</table><type>calculated</type></fx_price><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="USD">USD</currency><field>rec_price_if_checked</field><id>6ea8624b07221010b02bf61d7c1ed022</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>admin</sys_created_by><sys_created_on>2020-08-15 09:46:43</sys_created_on><sys_id>3ff8aa4b07221010b02bf61d7c1ed018</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-08-15 09:46:43</sys_updated_on><table>item_option_new</table><type>calculated</type></fx_price></record_update>]]></payload>
+        <payload_hash>1968477413</payload_hash>
+        <record_name>Select add on features</record_name>
+        <reverted_from/>
+        <source>f424d33d07ae9410b02bf61d7c1ed0cf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-17 23:41:55</sys_created_on>
+        <sys_id>7d5bfb7307669010b02bf61d7c1ed0ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>173fecd03a50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-17 23:41:55</sys_updated_on>
+        <type>Variable</type>
+        <update_guid>755bfb73816690107df3d79e65ba6cce</update_guid>
+        <update_guid_history>755bfb73816690107df3d79e65ba6cce:1968477413,0cda3b73b866901042be1a1010c147f7:898122275,f25a7733056690102ece6db786017ab5:-1558307837,7669f3331c669010235d1a8efa4af7dc:-369621674,5f48bfffaf269010dbeeeee76709ca3b:-562806504,f957bfbff22690105f48a55ebf33f870:-1009460442,0396b3bf98269010d2e670d6f75db63a:-1558307837,79f4737f542690100e0ce04ee17bff17:898122275,8a34337ffc2690100f425cb15ab043db:-1558307837,89719f774ee29010f516f86992035deb:635578357,5bb09b7775e290100ea80cdea19ab3b1:-2124560653,3bba0b730be29010cdb8a41b27b3705a:710229968,99aa26cbce221010e0d596893cacced4:-1509090682,7499e68b8722101010367ca736de77df:971186998,c389a28b1b2210109293c31c15bec8fc:1320620695,fff8ae4b44221010a35abfcbb3920862:1342075115</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Select add on features">63591d5c07f2d010b02bf61d7c1ed06f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-19 01:11:13</sys_created_on>
+        <sys_db_object display_value="" name="item_option_new">item_option_new</sys_db_object>
+        <sys_id>d2d9fab1f81d4c18a9bfdcc49a881a21</sys_id>
+        <sys_metadata>6ea8624b07221010b02bf61d7c1ed022</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Select add on features</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent display_value="TEM -New Mobile Subscription">4f42ef7507ee9410b02bf61d7c1ed034</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>item_option_new_6ea8624b07221010b02bf61d7c1ed022</sys_update_name>
+        <sys_update_version display_value="item_option_new_6ea8624b07221010b02bf61d7c1ed022">7d5bfb7307669010b02bf61d7c1ed0ce</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-19 01:11:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

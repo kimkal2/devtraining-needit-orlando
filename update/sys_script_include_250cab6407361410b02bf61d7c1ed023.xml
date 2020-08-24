@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_58872_needit.CalculatePlanPrice</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Add all the price components (add ons) and return total price.</description>
+        <name>CalculatePlanPrice</name>
+        <script><![CDATA[var CalculatePlanPrice = Class.create();
+CalculatePlanPrice.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	mandatoryAddOnPrice: function(plan_name_s) {
+
+		var plan_name_u = this.getParameter('sysparm_plan_name');
+
+		var gr = new GlideRecord('x_58872_needit_plan');
+
+		if (plan_name_u) {
+			gr.get(plan_name_u);
+		} else {
+			gr.get(plan_name_s);
+		}		
+		gs.info("mandatoryAddOnPrice called! name is  " + gr.name);		
+		// get the mandatory add-on as an array
+		var addons_sys_id_arr = gr.mandatory_addons.split(',');
+		var total = 0;
+		gr_addon = new GlideRecord('x_58872_needit_plan_add_on');
+		addons_sys_id_arr.forEach(function (addon, index) {
+			gr_addon.get(addon);
+			gs.info("mandatoryAddOnPrice addon price "+ parseFloat(gr_addon.recurring_price));
+			total = total + parseFloat(gr_addon.recurring_price);			
+		});
+		gs.info("mandatoryAddOnPrice total is "+ total);
+		return total;
+	},
+
+	type: 'CalculatePlanPrice'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-20 06:32:22</sys_created_on>
+        <sys_id>250cab6407361410b02bf61d7c1ed023</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>CalculatePlanPrice</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_include_250cab6407361410b02bf61d7c1ed023</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-20 13:23:12</sys_updated_on>
+    </sys_script_include>
+</record_update>

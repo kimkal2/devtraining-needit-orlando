@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Plan add on" max_length="40" name="x_58872_needit_plan_add_on" sizeclass="6" type="collection">
+        <element label="Country" max_length="32" name="country" reference="core_country" type="reference"/>
+        <element label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element label="Optional for plans" max_length="4000" name="optional_for_plans" reference="x_58872_needit_plan" type="glide_list"/>
+        <element label="Plan feature" max_length="40" name="plan_feature" type="string"/>
+        <element label="Price" max_length="20" name="price" type="currency"/>
+        <element label="Recurring price" max_length="20" name="recurring_price" type="currency"/>
+        <element label="Vendor" max_length="32" name="vendor" reference="x_58872_needit_vendor" type="reference"/>
+        <index name="index">
+            <element name="country"/>
+        </index>
+        <index name="index2">
+            <element name="vendor"/>
+        </index>
+        <index name="index3">
+            <element name="location"/>
+        </index>
+    </element>
+</database>

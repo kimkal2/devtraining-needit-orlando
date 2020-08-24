@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($rootScope,$scope) {
+	/* widget controller */
+	var c = this;
+	c.selectRitm = function(idx) {
+		var id = c.data.ritms[idx].sys_id;
+		console.log('RITM ID: ' + id);
+		$rootScope.ritmID = id;
+		$rootScope.$emit('selectRitm', id);
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>tem_request_item_list</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Tem Request Item List</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	//Server script
+	data.ritms = [];
+	data.userName = gs.getUserDisplayName();
+	var ritmGR = new GlideRecord("sc_req_item");
+	//ritmGR.addQuery('assigned_to', gs.getUser().getID());
+	
+  ritmGR.orderByDesc("sys_created_on");
+	ritmGR.query();
+	while(ritmGR.next() && data.ritms.length < 10) {
+		var ritmObj = {};
+		if (!$sp.canReadRecord(ritmGR)) 
+			continue;
+    var requested_for = ritmGR.request.requested_for;
+		if (requested_for.localeCompare(gs.getUser().getID()) == 0) {
+			//use service portal helper method to get some display values
+			$sp.getRecordDisplayValues(ritmObj, ritmGR, 'sys_id,number,due_date');
+			//get the first 30 characters of the description
+			ritmObj.short_description = ritmGR.getValue('short_description').slice(0,30);
+			
+			// need to get variables (not working)
+			
+			ritmObj.select_plan = ritmGR.variables.select_plan;
+
+			//push the populated obj into the array
+			data.ritms.push(ritmObj);
+		}
+		
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-23 13:40:15</sys_created_on>
+        <sys_id>f22be07507f61010b02bf61d7c1ed0a5</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>Tem Request Item List</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sp_widget_f22be07507f61010b02bf61d7c1ed0a5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-23 19:07:51</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+<div class="panel-heading clearfix">
+<h3 class="panel-title pull-left">
+${Request Item}
+</h3>
+</div>
+<div class="list-group">
+<a class="list-group-item" ng-click="c.selectRitm($index)" ng-repeat="ritm in data.ritms">
+<h4 class="list-group-item-heading">
+{{ritm.number}}        due:{{ritm.due_date}}
+{{ritm.sys_id}}
+</h4>
+<p class="list-group-item-text">
+{{ritm.short_description}}
+{{ritm.select_pan}}
+</p>
+</a>
+</div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

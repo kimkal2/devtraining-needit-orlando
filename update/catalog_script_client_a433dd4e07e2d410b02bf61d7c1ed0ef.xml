@@ -3,12 +3,12 @@
         <active>true</active>
         <applies_catalog>true</applies_catalog>
         <applies_extended>false</applies_extended>
-        <applies_req_item>false</applies_req_item>
+        <applies_req_item>true</applies_req_item>
         <applies_sc_task>false</applies_sc_task>
         <applies_target_record>false</applies_target_record>
         <applies_to>item</applies_to>
         <cat_item display_value="TEM -New Mobile Subscription">4f42ef7507ee9410b02bf61d7c1ed034</cat_item>
-        <cat_variable>IO:31856b7907ee9410b02bf61d7c1ed020</cat_variable>
+        <cat_variable>IO:3e687fb50722d410b02bf61d7c1ed034</cat_variable>
         <condition/>
         <description/>
         <field/>
@@ -17,26 +17,42 @@
         <messages/>
         <name>TEM populate approver</name>
         <order/>
-        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
-   if (newValue == '') {
+        <script><![CDATA[//function onLoad() {
+function onChange(control, oldValue, newValue, isLoading) {
+   if (isLoading || newValue == '') {
       return;
    }
+  
 
+	alert("TEM  populate approver");
+/*	
    //Type appropriate comment here, and begin script below
    //var business_user= g_form.getReference('business_user', setManager);
 	var business_user=g_form.getValue('business_user');
-	var glideMTA = new GlideAjax('GetManager');
-    glideMTA.addParam('sysparm_name','fetchData');
-    glideMTA.addParam('sysparm_business_user',business_user);
+	var grGetMgr = new GlideAjax('GetManager');
+    grGetMgr.addParam('sysparm_name','fetchData');
+    grGetMgr.addParam('sysparm_business_user',business_user);
 	alert("TEM  populate approver");
-    glideMTA.getXML(callback);
+    grGetMgr.getXML(callback);
     function callback(response)
     {
        var managerFromSI= response.responseXML.documentElement.getAttribute("answer");
         g_form.setValue('request_approver',managerFromSI);//change your field name here
     }	
 }
+*/
+	var business_user = g_form.getReference('business_user',fillRec);
+}
 
+
+function fillRec(response){
+	var gr = new GlideRecord('sys_user');
+	gr.addQuery('user_name', response.business_user);		
+	gr.query();
+	if (gr.next()){
+		g_form.setValue('request_approver',gr.manager);
+	}
+}
 
    ]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
@@ -45,7 +61,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a433dd4e07e2d410b02bf61d7c1ed0ef</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>TEM populate approver</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
@@ -53,7 +69,7 @@
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>catalog_script_client_a433dd4e07e2d410b02bf61d7c1ed0ef</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-08-12 10:54:11</sys_updated_on>
+        <sys_updated_on>2020-08-23 17:52:22</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>0</ui_type>
