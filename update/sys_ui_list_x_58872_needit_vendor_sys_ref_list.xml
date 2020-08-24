@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="x_58872_needit_vendor" element="NULL" name="x_58872_needit_vendor" parent="NULL" relationship="NULL" sys_domain="global" view="9f0621502c1300100c1dbc48b5c9f55a">42e47ff10722d410b02bf61d7c1ed006</list_id>
+            <list_id display_value="x_58872_needit_vendor" element="NULL" name="x_58872_needit_vendor" parent="NULL" relationship="NULL" sys_domain="global" view="9f0621502c1300100c1dbc48b5c9f55a">84437f710722d410b02bf61d7c1ed080</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -18,7 +18,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>country</element>
-            <list_id display_value="x_58872_needit_vendor" element="NULL" name="x_58872_needit_vendor" parent="NULL" relationship="NULL" sys_domain="global" view="9f0621502c1300100c1dbc48b5c9f55a">42e47ff10722d410b02bf61d7c1ed006</list_id>
+            <list_id display_value="x_58872_needit_vendor" element="NULL" name="x_58872_needit_vendor" parent="NULL" relationship="NULL" sys_domain="global" view="9f0621502c1300100c1dbc48b5c9f55a">84437f710722d410b02bf61d7c1ed080</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>

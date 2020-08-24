@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Plan" max_length="40" name="x_58872_needit_plan" sizeclass="3" type="collection">
+    <element label="Plan" max_length="40" name="x_58872_needit_plan" type="collection">
         <element label="Active" max_length="40" name="active" type="boolean"/>
         <element label="Country" max_length="32" name="country" reference="core_country" type="reference"/>
         <element label="Location" max_length="32" name="location" reference="imp_location" type="reference"/>
